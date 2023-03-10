@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,700&display=swap");
+:root {
+  --section-padding: 1rem 2.5rem;
+  --section-margin: 1rem 2.5rem;
+}
+* {
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--section-margin);
+}
+header .additional-links {
+  display: none;
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+}
+header .logo {
+  font-weight: 900;
+}
+header nav {
+  display: flex;
+  gap: 15px;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  background-position-y: 0 -1.5rem;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('./assets/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 18rem;
+  color: white;
+  margin: 0;
+}
+.hero-section__content {
+  padding: var(--section-padding);
+}
+.hero-section__content h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+.hero-section button {
+  width: 8rem;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px solid #eee;
+  height: 250px;
+  width: 100%;
+  margin: var(--section-margin);
+}
+.header {
+  text-align: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 25%;
+  /* box-shadow: 0 5px 10px #ccc; */
+  margin: var(--section-margin)
+}
+
+.posts-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* flex-wrap: wrap; */
+  margin: var(--section-margin);
+}
+section h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+section .image-container {
+  height: 100%;
+  /* width: 100%; */
+  flex: 2;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+section .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .texts {
+  padding: 15px;
+  flex: 1.3;
+}
+section .texts p {
+  text-align: justify;
+  margin: 0;
+  line-height: 1.2rem;
+}
+section .texts div {
+  display: flex;
+  margin: 0;
+  padding: 10px 0;
+  gap: 10px;
+  font-size: 10px;
+}
+section .texts span {
+  font-weight: 700;
+  color: #777;
+}
+form {
+  max-width: 550px;
+  margin: 6rem auto;
+}
+
+form h2 {
+  text-align: center;
+}
+input {
+  width: 100%;
+  padding: 5px 7px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+button {
+  width: 100%;
+  background: rgb(94, 177, 94);
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer
+}
+a:hover, a.active {
+  font-weight: bold;
+}
+.logout {
+  all: unset;
+  cursor: pointer;
+  background: rgb(94, 177, 94);
+  color: white;
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+.logout:hover {
+  transition: all .3s;
+  border: 1px solid rgb(94, 177, 94);
+  color: #333;
+  background: none;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.posts-container a{
+  color: inherit;
+  text-decoration: none;
+  transition: all .3s;
+}
+.posts-container a:hover {
+  color:rgb(94, 177, 94);
+}
+.post-page {
+  width: 900px;
+  margin: 0 auto;
+}
+.post-page__image {
+  max-height: 200px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.post-page__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center -21rem;
+
+}
+
+.post-info {
+  display: flex;
+  margin-top: 0.7rem;
+  /* justify-content: center;
+  align-items: center; */
+  font-size: 12px;
+  color: #777;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.post-info p {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+.post-page {
+  width: 400px;
+  margin: auto;
+}
+.post-page__image {
+  width: 100%;
+  height: 100%;
+}
+.edit-button-container {
+  text-decoration: none;
+  background: #333;
+  color: white;
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  border-radius: 0.5rem;
+  justify-content: center;
+  width: 30%;
+}
+.edit-button-container svg {
+  width: 20px;
+}
+/* responsive design */
+@media screen and (min-width: 768px) {
+  .post-page {
+    width: 700px;
+    margin: auto;
+  }
+  .posts-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 1px solid #eee;
+    height: 450px;
+    width: 300px;
+  }
+  .posts-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    /* overflow:scroll; */
+  }
+  header .additional-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  }
